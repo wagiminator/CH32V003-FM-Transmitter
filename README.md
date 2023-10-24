@@ -33,7 +33,7 @@ Connect the battery to the JST connector on the board. Pay attention to the corr
 ![FM_Transmitter_pic6.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic6.jpg)
 
 # Compiling and Uploading Firmware
-## Programming and Debugging Devices
+## Programming and Debugging Device
 To program the CH32V003 microcontroller, you will need a special programming device which utilizes the proprietary single-wire serial debug interface (SDI). The [WCH-LinkE](http://www.wch-ic.com/products/WCH-Link.html) (pay attention to the "E" in the name) is a suitable device for this purpose and can be purchased commercially for around $4. This debugging tool is not only compatible with the CH32V003 but also with other WCH RISC-V and ARM-based microcontrollers.
 
 ![CH32V003_wch-linke.jpg](https://raw.githubusercontent.com/wagiminator/Development-Boards/main/CH32V003F4P6_DevBoard/documentation/CH32V003_wch-linke.jpg)
@@ -50,7 +50,7 @@ WCH-LinkE    FM Transmitter
 ```
 
 If the blue LED on the WCH-LinkE remains illuminated once it is connected to the USB port, it means that the device is currently in ARM mode and must be switched to RISC-V mode initially. There are a few ways to accomplish this:
-- You can utilize the Python tool called rvmode.py, which is provided in the software/tools folder.
+- You can utilize the Python tool rvprog.py (with -v option), which is provided in the software/tools folder.
 - Alternatively, you can select "WCH-LinkRV" in the software provided by WCH, such as MounRiver Studio or WCH-LinkUtility.
 - Another option is to hold down the ModeS button on the device while plugging it into the USB port.
 
