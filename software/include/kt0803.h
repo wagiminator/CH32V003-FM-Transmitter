@@ -7,6 +7,12 @@
 //
 // Functions available:
 // --------------------
+// KT_init()              KT0802 init function (write default values)
+// KT_getFreq()           Get current frequency (in 100kHz steps, 885 means 88.5Mhz)
+// KT_setFreq(f)          Set frequency (in 100kHz steps, 885 means 88.5Mhz)
+// KT_setGain(g)          Set gain (0: -12dB, ... , 3: 0dB, ... , 6: +12dB)
+// KT_setMute(m)          Set mude (0: unmute, 1: mute)
+// KT_setRegion(r)        Set region (0: USA/Japan, 1: Europe/Australia)
 //
 // 2023 by Stefan Wagner: https://github.com/wagiminator
 

@@ -9,21 +9,16 @@
 // --------------------
 // OLED_init()              Init OLED display
 // OLED_clear()             Clear screen of OLED display
-// OLED_write(c)            Write a character or handle control characters
-// OLED_print(s)            Print string on OLED display
-// OLED_println(s)          Print string with newline
-// OLED_printS(s)           Print string on OLED display
-// OLED_printD(n)           Print decimal value
-// OLED_printL(n)           Print hex long value
-// OLED_printW(n)           Print hex word value
-// OLED_printB(n)           Print hex byte value
-// OLED_newline()           Print newline
+// OLED_write(c)            Write a special character
+// OLED_setCursor(d)        Set cursor to digit position
+// OLED_printVal(v, d, p)   Print value (v) with (d) digits and point at position (p) 
 //
 // References:
 // -----------
-// - Neven Boyanov: https://github.com/tinusaur/ssd1306xled
-// - Stephen Denne: https://github.com/datacute/Tiny4kOLED
-// - TinyOLEDdemo: https://github.com/wagiminator/attiny13-tinyoleddemo
+// - Neven Boyanov:       https://github.com/tinusaur/ssd1306xled
+// - Stephen Denne:       https://github.com/datacute/Tiny4kOLED
+// - TinyOLEDdemo:        https://github.com/wagiminator/attiny13-tinyoleddemo
+// - OLED Font Editor:    http://sourpuss.net/projects/fontedit/
 //
 // 2022 by Stefan Wagner: https://github.com/wagiminator
 

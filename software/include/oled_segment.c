@@ -7,9 +7,10 @@
 //
 // References:
 // -----------
-// - Neven Boyanov: https://github.com/tinusaur/ssd1306xled
-// - Stephen Denne: https://github.com/datacute/Tiny4kOLED
-// - TinyOLEDdemo: https://github.com/wagiminator/attiny13-tinyoleddemo
+// - Neven Boyanov:       https://github.com/tinusaur/ssd1306xled
+// - Stephen Denne:       https://github.com/datacute/Tiny4kOLED
+// - TinyOLEDdemo:        https://github.com/wagiminator/attiny13-tinyoleddemo
+// - OLED Font Editor:    http://sourpuss.net/projects/fontedit/
 //
 // 2022 by Stefan Wagner: https://github.com/wagiminator
 

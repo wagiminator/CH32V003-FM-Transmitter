@@ -1,5 +1,5 @@
 // ===================================================================================
-// Basic I2C Master Functions (write only) for CH32V003                       * v1.0 *
+// Basic I2C Master Functions (write only) for CH32V003                       * v1.1 *
 // ===================================================================================
 // 2023 by Stefan Wagner:   https://github.com/wagiminator
 
@@ -13,7 +13,7 @@
 
 // Init I2C
 void I2C_init(void) {
-  #if I2C_REMAP == 0
+  #if I2C_MAP == 0
   // Enable GPIO port C and I2C module
   RCC->APB2PCENR |= RCC_AFIOEN | RCC_IOPCEN;
   RCC->APB1PCENR |= RCC_I2C1EN;
@@ -21,7 +21,7 @@ void I2C_init(void) {
   // Set pin PC1 (SDA) and PC2 (SCL) to output, open-drain, 10MHz, multiplex
   GPIOC->CFGLR = (GPIOC->CFGLR & ~(((uint32_t)0b1111<<(1<<2)) | ((uint32_t)0b1111<<(2<<2))))
                                |  (((uint32_t)0b1101<<(1<<2)) | ((uint32_t)0b1101<<(2<<2)));
-  #elif I2C_REMAP == 1
+  #elif I2C_MAP == 1
   // Remap I2C pins, enable GPIO port D and I2C module
   RCC->APB2PCENR |= RCC_AFIOEN | RCC_IOPDEN;
   RCC->APB1PCENR |= RCC_I2C1EN;
@@ -30,7 +30,7 @@ void I2C_init(void) {
   // Set pin PD0 (SDA) and PD1 (SCL) to output, open-drain, 10MHz, multiplex
   GPIOD->CFGLR = (GPIOD->CFGLR & ~(((uint32_t)0b1111<<(0<<2)) | ((uint32_t)0b1111<<(1<<2))))
                                |  (((uint32_t)0b1101<<(0<<2)) | ((uint32_t)0b1101<<(1<<2)));
-  #elif I2C_REMAP == 2
+  #elif I2C_MAP == 2
   // Remap I2C pins, enable GPIO port C and I2C module
   RCC->APB2PCENR |= RCC_AFIOEN | RCC_IOPCEN;
   RCC->APB1PCENR |= RCC_I2C1EN;
