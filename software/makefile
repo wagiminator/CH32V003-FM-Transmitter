@@ -14,7 +14,7 @@ INCLUDE  = include
 TOOLS    = tools
 
 # Microcontroller Settings
-F_CPU    = 12000000
+F_CPU    = 8000000
 LDSCRIPT = linker/ch32v003.ld
 CPUARCH  = -march=rv32ec -mabi=ilp32e
 
