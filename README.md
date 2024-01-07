@@ -100,7 +100,7 @@ python3 ./tools/rvprog.py -f transmitter.bin
 
 ![FM_Transmitter_pic7.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic7.jpg)
 
-If you don't have an FM radio receiver and/or you want to build one yourself, take a look [here](https://github.com/wagiminator/ATtiny412-PocketRadio).
+If you don't have an FM radio receiver and/or you want to build one yourself, take a look [here](https://github.com/wagiminator/CH32V003-FM-Receiver).
 
 # References, Links and Notes
 - [EasyEDA Design Files](https://oshwlab.com/wagiminator)
@@ -114,7 +114,7 @@ If you don't have an FM radio receiver and/or you want to build one yourself, ta
 - [TP4054 datasheet](https://media.digikey.com/pdf/Data%20Sheets/UTD%20Semi%20PDFs/TP4054.pdf)
 - [SSD1306 datasheet](https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf)
 - [128x32 OLED on Aliexpress](http://aliexpress.com/wholesale?SearchText=128+32+0.91+oled)
-- [FM Pocket Radio](https://github.com/wagiminator/ATtiny412-PocketRadio)
+- [CH32V003 FM Radio Receiver](https://github.com/wagiminator/CH32V003-FM-Receiver)
 
 ![FM_Transmitter_pic2.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic2.jpg)
 
