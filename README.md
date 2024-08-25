@@ -22,20 +22,22 @@ The ME6209 series are a group of positive voltage output, three–pin regulator,
 ## SSD1306 OLED Display Module
 A low-cost SSD1306 4-pin I2C 128x32 pixels 0.91-inch OLED module is used as the display device. Make sure to acquire one with the correct pinout!
 
-# Building Instructions
-Solder all components to the PCB. Solder the wire antenna to the corresponding pad on the board. A 75cm (30" = λ / 4) long 28AWG flexible silicone insulated wire works very well.
+## Building Instructions
+1. Take the Gerber files (the *zip* file inside the *hardware* folder) and upload them to a PCB (printed circuit board) manufacturer of your choice (e.g., [JLCPCB](https://jlcpcb.com/)). They will use these files to create the circuit board for your device and send it to you.
+2. Once you have the PCB, you can start soldering the components onto it. Use the BOM (bill of materials) and schematic as a guide to make sure everything is connected correctly. You can find the corresponding files in the *hardware* folder. Remove the plastic part from the pin header of the OLED, trim the pins, and solder the OLED module flush onto the PCB. Solder the wire antenna to the corresponding pad on the board. A 75cm (30" = λ / 4) long 28AWG flexible silicone insulated wire works very well.
 
 ![FM_Transmitter_pic4.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic4.jpg)
 
-3D print the case. Glue the battery into the case with double-sided tape. Thread the wire antenna through the small hole in the housing.
+3. Upload the firmware by following the instructions in the next section (see below).
+4. To create the case for your device, use the *stl* files in the *3dprint* folder with your 3D printer. Glue the battery into the case with double-sided tape. Thread the wire antenna through the small hole in the housing.
 
 ![FM_Transmitter_pic5.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic5.jpg)
 
-Connect the battery to the JST connector on the board. Pay attention to the correct polarity, unfortunately there is no standard here! Place the board on the case and screw it with four M2x5mm self-tapping screws.
+5. Connect the battery to the JST connector on the board. Pay attention to the correct polarity, unfortunately there is no standard here! Place the board on the case and screw it with four M2x5mm self-tapping screws.
 
 ![FM_Transmitter_pic6.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-FM-Transmitter/main/documentation/FM_Transmitter_pic6.jpg)
 
-# Compiling and Uploading Firmware
+# Software
 ## Programming and Debugging Device
 To program the CH32V003 microcontroller, you will need a special programming device which utilizes the proprietary single-wire serial debug interface (SDI). The [WCH-LinkE](http://www.wch-ic.com/products/WCH-Link.html) (pay attention to the "E" in the name) is a suitable device for this purpose and can be purchased commercially for around $4. This debugging tool is not only compatible with the CH32V003 but also with other WCH RISC-V and ARM-based microcontrollers.
 
@@ -80,11 +82,6 @@ pip install rvprog
 Switch off the FM Transmitter or remove the battery. Connect the FM Transmitter via the 3-pin PROG header to the WCH-LinkE programming device. Open a terminal and navigate to the folder with the *makefile*. Run the following command to compile and upload:
 ```
 make flash
-```
-
-If you want to just upload the pre-compiled binary, run the following command instead:
-```
-rvprog -f bin/fm_transmitter.bin
 ```
 
 ### Other Operating Systems
